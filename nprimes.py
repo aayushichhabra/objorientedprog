@@ -9,6 +9,12 @@ def factors(n):
 def isprime(n):
     return (factors(n)==[1,n])
 
+def primesupton(n):
+    plist=[]
+    for i in range(1,n+1):
+        if isprime(i)==True:
+            plist=plist+[i]
+    return(plist)
 
 def nprimes(n):
     (count,i,plist)=(0,1,[])
@@ -18,4 +24,5 @@ def nprimes(n):
         i=i+1
     return(plist)
 
-print(nprimes(3))
+print("first3 prime nos:",nprimes(3))
+print("all prime nos smaller than 15:",primesupton(15))
